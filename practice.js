@@ -12,4 +12,3 @@ const w = 10
 console.log(w)
 w = 9
 console.log(w)
-
