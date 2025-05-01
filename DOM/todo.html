@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Todo App</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>Todo list</h1>
+
+    <div id="todos">
+        <div id="todo-1">
+            <h4>1. Attend class</h4>
+            <button onclick="deleteTodo(1)">delete</button>
+        </div>
+        <div id="todo-2">
+            <h4>2.Go out to eat</h4>
+            <button onclick="deleteTodo(2)">delete</button>
+        </div>
+    </div>
+    <div>
+        <input type="text" placeholder="Sleep">
+        <button onclick="addTodo()">add Todo</button>
+    </div>
+
+    <script>
+        let i = 3;
+        function deleteTodo(index) {
+            const element = document.getElementById("todo-" + index);
+            element.parentNode.removeChild(element);
+        }
+
+        function addTodo() {
+            const inputel = document.querySelector("input")
+            const textnode = document.createElement("<div id='todos-i'> <h4>inputel.value</h4> <button onclick="deleteTodo(i)">delete</button>");
+            i++;
+            console.log(textnode.innerHTML)
+            const parentel = document.getElementById('todos');
+            parentel.appendChild(textnode);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
